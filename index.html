@@ -361,8 +361,10 @@
     }
     @media (max-width: 768px) {
       #hero { grid-template-columns: 1fr; padding: 3rem 5vw 3.5rem; }
-      .hero-badges { flex-direction: row; justify-content: flex-start; align-items: center; flex-wrap: wrap; }
-      .badge { min-width: 90px; }
+      .hero-badges { flex-direction: row; justify-content: flex-start; align-items: center; flex-wrap: nowrap; gap: .5rem; }
+      .badge { min-width: unset; flex: 1; padding: .7rem .5rem; }
+      .badge .bnum { font-size: 1.3rem; }
+      .badge .blabel { font-size: .6rem; }
       #sobre { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 5vw; }
       #servicos { padding: 3rem 5vw; }
       #depoimentos { padding: 3rem 5vw; }
@@ -609,7 +611,7 @@
   <section id="contato">
     <div class="contato-inner">
       <h2>Solicite seu orçamento</h2>
-      <p>Rápido e sem compromisso. Respondemos em até 1 hora nos dias úteis.</p>
+      <p>Entre em contato e receba uma resposta rápida.</p>
       <div class="contato-options">
         <a href="https://wa.me/5585992512493?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="copt" target="_blank">
           <span class="cico">💬</span>
