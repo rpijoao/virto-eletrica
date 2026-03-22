@@ -33,7 +33,7 @@
       "addressRegion": "CE",
       "addressCountry": "BR"
     },
-    "openingHours": "Mo-Su 00:00-23:59",
+    "openingHours": ["Mo-Sa 07:00-19:00"],
     "priceRange": "$$"
   }
   </script>
@@ -315,7 +315,50 @@
     }
     .wpp-float:hover { transform: scale(1.1); }
 
-    /* ── RESPONSIVE ── */
+    /* ── HAMBURGER MOBILE ── */
+    .hamburger {
+      display: none;
+      flex-direction: column; gap: 5px;
+      cursor: pointer; padding: .4rem;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--white); border-radius: 2px;
+      transition: all .3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed; top: 57px; left: 0; width: 100%; z-index: 99;
+      background: var(--dark);
+      border-top: 1px solid rgba(255,255,255,.08);
+      flex-direction: column;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      padding: 1rem 6vw;
+      color: var(--light); text-decoration: none;
+      font-size: .95rem; font-weight: 500;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      transition: background .2s;
+    }
+    .mobile-menu a:hover { background: rgba(255,255,255,.05); }
+    .mobile-menu a.mm-btn {
+      background: var(--red); color: var(--white);
+      font-weight: 700; text-align: center; margin: 1rem 6vw;
+      border-radius: 8px; border: none;
+    }
+
+
+
+    @media (max-width: 768px) {
+      .hamburger { display: flex; }
+      .nav-links, .nav-cta, .nav-phone { display: none; }
+      .wpp-float { display: flex; }
+    }
     @media (max-width: 768px) {
       #hero { grid-template-columns: 1fr; }
       .hero-badges { flex-direction: row; justify-content: flex-start; align-items: center; }
@@ -323,7 +366,6 @@
       #sobre { grid-template-columns: 1fr; gap: 2rem; }
       .contato-options { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
-      .nav-phone { display: none; }
       footer { flex-direction: column; text-align: center; }
     }
   </style>
@@ -336,8 +378,22 @@
     <div class="nav-right">
       <a href="tel:+5585992512493" class="nav-phone">📞 (85) 99251-2493</a>
       <a href="#contato" class="nav-btn">Pedir Orçamento</a>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
     </div>
   </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#servicos" onclick="toggleMenu()">Serviços</a>
+    <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+    <a href="#depoimentos" onclick="toggleMenu()">Depoimentos</a>
+    <a href="#contato" onclick="toggleMenu()">Contato</a>
+    <a href="#contato" class="mm-btn" onclick="toggleMenu()">Pedir Orçamento</a>
+  </div>
+
+
 
   <!-- HERO -->
   <section id="hero">
@@ -544,7 +600,7 @@
   <section id="contato">
     <div class="contato-inner">
       <h2>Solicite seu orçamento</h2>
-      <p>Gratuito e sem compromisso. Respondemos em até 1 hora nos dias úteis.</p>
+      <p>Rápido e sem compromisso. Respondemos em até 1 hora nos dias úteis.</p>
       <div class="contato-options">
         <a href="https://wa.me/5585992512493?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="copt" target="_blank">
           <span class="cico">💬</span>
@@ -576,6 +632,22 @@
 
   <!-- WhatsApp flutuante -->
   <a href="https://wa.me/5585992512493?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="wpp-float" target="_blank" title="Chamar no WhatsApp">💬</a>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('hamburger').classList.toggle('open');
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(r => obs.observe(r));
+  </script>
 
 </body>
 </html>
