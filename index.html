@@ -360,13 +360,22 @@
       .wpp-float { display: flex; }
     }
     @media (max-width: 768px) {
-      #hero { grid-template-columns: 1fr; }
-      .hero-badges { flex-direction: row; justify-content: flex-start; align-items: center; }
+      #hero { grid-template-columns: 1fr; padding: 3rem 5vw 3.5rem; }
+      .hero-badges { flex-direction: row; justify-content: flex-start; align-items: center; flex-wrap: wrap; }
       .badge { min-width: 90px; }
-      #sobre { grid-template-columns: 1fr; gap: 2rem; }
+      #sobre { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 5vw; }
+      #servicos { padding: 3rem 5vw; }
+      #depoimentos { padding: 3rem 5vw; }
+      #contato { padding: 3rem 5vw; }
+      #galeria { padding: 3rem 5vw !important; }
+      .strip { padding: 1.5rem 5vw; }
       .contato-options { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
-      footer { flex-direction: column; text-align: center; }
+      footer { flex-direction: column; text-align: center; padding: 1.5rem 5vw; }
+      .sobre-cta-box { padding: 1.8rem; }
+      .contato-inner { padding: 0; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions a { text-align: center; justify-content: center; }
     }
   </style>
 </head>
