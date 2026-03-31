@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/whatsapp",
-      "destination": "https://wa.me/5585992512493",
+      "destination": "https://wa.me/5585992512493?text=Ola%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%21",
       "permanent": false
     }
   ]
