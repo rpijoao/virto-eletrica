@@ -1,0 +1,270 @@
+/* ══════════════════════════════════════════════════
+   VIRTO ELÉTRICA — Shared Components
+   Nav, Footer, Botões WhatsApp, Mobile Menu
+   ══════════════════════════════════════════════════ */
+
+/* ── NAV ── */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 6vw;
+}
+
+.nav-logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.nav-logo span {
+  color: var(--red);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-phone {
+  color: var(--light);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.nav-phone:hover {
+  color: var(--red);
+}
+
+.nav-btn {
+  background: var(--red);
+  color: var(--white);
+  padding: 0.55rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background var(--transition-fast);
+  white-space: nowrap;
+}
+
+.nav-btn:hover {
+  background: var(--red-dark);
+}
+
+/* ── HAMBURGER ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 0.4rem;
+  background: none;
+  border: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: all var(--transition-mid);
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── MOBILE MENU ── */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 57px;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background: var(--dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  flex-direction: column;
+}
+
+.mobile-menu.open {
+  display: flex;
+}
+
+.mobile-menu a {
+  padding: 1rem 6vw;
+  color: var(--light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background var(--transition-fast);
+}
+
+.mobile-menu a:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.mobile-menu a.mm-btn {
+  background: var(--red);
+  color: var(--white);
+  font-weight: 700;
+  text-align: center;
+  margin: 1rem 6vw;
+  border-radius: 8px;
+  border: none;
+}
+
+/* ── BOTÃO WHATSAPP (compartilhado) ── */
+.btn-wpp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--wpp-green);
+  color: var(--white);
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.btn-wpp:hover {
+  opacity: 0.88;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #444;
+  color: #ccc;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.btn-outline:hover {
+  border-color: var(--red);
+  color: var(--white);
+}
+
+/* ── SECTION TITLES ── */
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 0.4rem;
+}
+
+.section-sub {
+  font-size: 0.95rem;
+  color: var(--mid);
+  margin-bottom: 2.5rem;
+}
+
+/* ── WHATSAPP FLUTUANTE ── */
+.wpp-float {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 200;
+  background: var(--wpp-green);
+  color: var(--white);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  text-decoration: none;
+  box-shadow: 0 4px 20px var(--wpp-glow);
+  transition: transform var(--transition-fast);
+}
+
+.wpp-float:hover {
+  transform: scale(1.1);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #111;
+  padding: 1.4rem 6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-logo {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.footer-logo span {
+  color: var(--red);
+}
+
+.footer-copy {
+  font-size: 0.78rem;
+  color: #555;
+}
+
+footer a {
+  color: #666;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+footer a:hover {
+  color: var(--red);
+}
+
+/* ── MOBILE SHARED ── */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links,
+  .nav-cta,
+  .nav-phone {
+    display: none;
+  }
+
+  .wpp-float {
+    display: flex;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 5vw;
+  }
+}

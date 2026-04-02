@@ -1,0 +1,34 @@
+/* ══════════════════════════════════════════════════
+   VIRTO ELÉTRICA — Design Tokens & Variables
+   Paleta, tipografia e tokens compartilhados
+   ══════════════════════════════════════════════════ */
+
+:root {
+  /* ── Cores da marca ── */
+  --red:         #ec1f26;
+  --red-dark:    #c41920;
+  --red-glow:    rgba(236, 31, 38, 0.15);
+
+  /* ── Neutros ── */
+  --dark:        #1a1a1a;
+  --gray:        #303030;
+  --mid:         #555;
+  --light:       #f0efef;
+  --border:      #e5e5e5;
+  --white:       #ffffff;
+
+  /* ── WhatsApp ── */
+  --wpp-green:   #25d366;
+  --wpp-glow:    rgba(37, 211, 102, 0.3);
+
+  /* ── Tipografia ── */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* ── Espaçamentos ── */
+  --pad-section: 4.5rem 6vw;
+  --pad-mobile:  3rem 5vw;
+
+  /* ── Transitions ── */
+  --transition-fast: 0.2s ease;
+  --transition-mid:  0.3s ease;
+}
