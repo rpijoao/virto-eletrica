@@ -60,8 +60,7 @@ body.page-orcamento::before {
 }
 
 .lp-nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   padding: 14px 60px;
   display: flex;
   align-items: center;
