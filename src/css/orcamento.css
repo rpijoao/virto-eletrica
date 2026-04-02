@@ -37,13 +37,14 @@ body.page-orcamento::before {
   z-index: 0;
 }
 
-/* ── WRAPPER — DESKTOP WIDE ── */
+/* ── WRAPPER — FULL WIDTH ── */
 .lp-wrapper {
   position: relative;
   z-index: 1;
-  max-width: 960px;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 0 60px;
 }
 
 /* ══════════════════════════════════════
