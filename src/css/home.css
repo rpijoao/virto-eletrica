@@ -190,42 +190,8 @@
   line-height: 1.6;
 }
 
-/* ── GALERIA ── */
-#galeria {
-  padding: var(--pad-section);
-  background: var(--light);
-}
+/* Galeria removida — adicionar quando tiver fotos reais */
 
-.galeria-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.galeria-placeholder {
-  aspect-ratio: 4/3;
-  background: #ddd;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  border: 2px dashed #bbb;
-}
-
-.galeria-placeholder .ph-icon {
-  font-size: 2rem;
-}
-
-.galeria-placeholder .ph-label {
-  font-size: 0.8rem;
-  color: #999;
-  font-weight: 600;
-}
-
-/* ── SOBRE ── */
 #sobre {
   background: var(--light);
   padding: var(--pad-section);

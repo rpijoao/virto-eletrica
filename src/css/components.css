@@ -16,15 +16,14 @@ nav {
 }
 
 .nav-logo {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--white);
-  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
 
-.nav-logo span {
-  color: var(--red);
+.nav-logo-img {
+  height: 28px;
+  width: auto;
 }
 
 .nav-right {
@@ -39,6 +38,9 @@ nav {
   font-weight: 500;
   text-decoration: none;
   transition: color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .nav-phone:hover {
@@ -221,14 +223,21 @@ footer {
   gap: 1rem;
 }
 
-.footer-logo {
-  font-size: 1rem;
-  font-weight: 800;
-  color: var(--white);
+.footer-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
-.footer-logo span {
-  color: var(--red);
+.footer-logo-img {
+  height: 24px;
+  width: auto;
+  opacity: 0.7;
+  transition: opacity var(--transition-fast);
+}
+
+.footer-logo-img:hover {
+  opacity: 1;
 }
 
 .footer-copy {
