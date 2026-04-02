@@ -246,8 +246,8 @@ body.page-orcamento::before {
    TRUST — Desktop: no hero-right | Mobile: row abaixo
    ══════════════════════════════════════ */
 
-/* Desktop: esconder trust-mobile */
-.trust-mobile {
+/* Desktop: esconder trust-mobile (row horizontal) */
+.trust-row.trust-mobile {
   display: none;
 }
 
@@ -525,7 +525,7 @@ body.page-orcamento::before {
   }
 
   /* Mostrar trust cards em row no mobile */
-  .trust-mobile {
+  .trust-row.trust-mobile {
     display: grid;
     margin: 36px 0 40px;
   }
