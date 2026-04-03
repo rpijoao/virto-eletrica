@@ -110,7 +110,7 @@ body.page-orcamento::before {
   align-items: center;
 }
 
-.hero-left {}
+/* .hero-left — herda layout do grid pai, sem estilos próprios */
 
 .hero-right {
   display: flex;
@@ -335,7 +335,7 @@ body.page-orcamento::before {
 }
 
 /* ── COMO FUNCIONA — Steps ── */
-.como-funciona {}
+/* .como-funciona — container semântico, sem estilos próprios */
 
 .steps {
   display: flex;
