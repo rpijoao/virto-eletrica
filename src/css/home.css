@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════
    VIRTO ELÉTRICA — Página Principal (Home)
-   Hero, Strip, Serviços, Galeria, Sobre,
+   Hero, Strip, Serviços, Sobre,
    Depoimentos, Contato
    ══════════════════════════════════════════════════ */
 
@@ -401,63 +401,7 @@
   color: var(--white);
 }
 
-/* ── FORMULÁRIO ── */
-.contato-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-}
-
-.form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.9rem;
-}
-
-input, textarea {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--white);
-  font-family: var(--font-family);
-  font-size: 0.9rem;
-  padding: 0.85rem 1rem;
-  border-radius: 8px;
-  outline: none;
-  width: 100%;
-  transition: border-color var(--transition-fast);
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #666;
-}
-
-input:focus,
-textarea:focus {
-  border-color: var(--red);
-}
-
-textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-.form-submit {
-  background: var(--red);
-  color: var(--white);
-  border: none;
-  padding: 0.9rem;
-  border-radius: 8px;
-  font-family: var(--font-family);
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: background var(--transition-fast);
-}
-
-.form-submit:hover {
-  background: var(--red-dark);
-}
+/* Formulário removido — contato via WhatsApp/telefone */
 
 /* ── HOME MOBILE ── */
 @media (max-width: 768px) {
@@ -507,10 +451,8 @@ textarea {
   #servicos { padding: var(--pad-mobile); }
   #depoimentos { padding: var(--pad-mobile); }
   #contato { padding: var(--pad-mobile); }
-  #galeria { padding: var(--pad-mobile) !important; }
 
   .contato-options { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
   .contato-inner { padding: 0; }
   .sobre-cta-box { padding: 1.8rem; }
 

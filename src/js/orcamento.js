@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════════
-   VIRTO ELÉTRICA — Orçamento Page JS
+   VIRTO ELÉTRICA — Atendimento Page JS
    Nenhuma lógica complexa, apenas imports de CSS
    ══════════════════════════════════════════════════ */
 
@@ -13,5 +13,5 @@ import '../css/orcamento.css';
 //    Futuras features (analytics, form, etc.) vão aqui.
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Virto Elétrica — Página de Orçamento carregada');
+  console.log(`Virto Elétrica — Página de Atendimento carregada`);
 });
