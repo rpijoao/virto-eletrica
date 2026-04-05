@@ -69,6 +69,7 @@
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#servicos" onclick="toggleMenu()">Serviços</a>
+    <a href="#galeria" onclick="toggleMenu()">Galeria</a>
     <a href="#sobre" onclick="toggleMenu()">Sobre</a>
     <a href="#depoimentos" onclick="toggleMenu()">Depoimentos</a>
     <a href="#contato" onclick="toggleMenu()">Contato</a>
@@ -177,6 +178,86 @@
       </div>
     </div>
   </section>
+
+  <!-- GALERIA -->
+  <section id="galeria">
+    <h2 class="section-title">Nossos trabalhos</h2>
+    <p class="section-sub">Confira alguns dos serviços realizados pela nossa equipe.</p>
+    <div class="galeria-grid" id="galeriaGrid">
+      <div class="galeria-item" onclick="abrirLightbox(0)">
+        <div class="galeria-placeholder">
+          <span class="galeria-ico">🗂️</span>
+          <span class="galeria-tag">Quadro Elétrico</span>
+        </div>
+        <div class="galeria-overlay">
+          <span>Ver foto</span>
+        </div>
+      </div>
+      <div class="galeria-item" onclick="abrirLightbox(1)">
+        <div class="galeria-placeholder">
+          <span class="galeria-ico">💡</span>
+          <span class="galeria-tag">Iluminação LED</span>
+        </div>
+        <div class="galeria-overlay">
+          <span>Ver foto</span>
+        </div>
+      </div>
+      <div class="galeria-item" onclick="abrirLightbox(2)">
+        <div class="galeria-placeholder">
+          <span class="galeria-ico">🔌</span>
+          <span class="galeria-tag">Instalação Tomadas</span>
+        </div>
+        <div class="galeria-overlay">
+          <span>Ver foto</span>
+        </div>
+      </div>
+      <div class="galeria-item" onclick="abrirLightbox(3)">
+        <div class="galeria-placeholder">
+          <span class="galeria-ico">⚡</span>
+          <span class="galeria-tag">Passagem de Cabeamento</span>
+        </div>
+        <div class="galeria-overlay">
+          <span>Ver foto</span>
+        </div>
+      </div>
+      <div class="galeria-item" onclick="abrirLightbox(4)">
+        <div class="galeria-placeholder">
+          <span class="galeria-ico">🛠️</span>
+          <span class="galeria-tag">Manutenção Preventiva</span>
+        </div>
+        <div class="galeria-overlay">
+          <span>Ver foto</span>
+        </div>
+      </div>
+      <div class="galeria-item" onclick="abrirLightbox(5)">
+        <div class="galeria-placeholder">
+          <span class="galeria-ico">🏗️</span>
+          <span class="galeria-tag">Instalação Comercial</span>
+        </div>
+        <div class="galeria-overlay">
+          <span>Ver foto</span>
+        </div>
+      </div>
+    </div>
+    <div class="galeria-footer">
+      <a href="https://wa.me/5585992512493?text=Ol%C3%A1%2C%20gostaria%20de%20ver%20mais%20fotos%20dos%20servi%C3%A7os." class="btn-outline" target="_blank">
+        Ver mais no WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="fecharLightbox()">
+    <button class="lightbox-close" onclick="fecharLightbox()" aria-label="Fechar">✕</button>
+    <button class="lightbox-prev" onclick="event.stopPropagation(); navegarLightbox(-1)" aria-label="Anterior">‹</button>
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <div class="lightbox-placeholder" id="lightboxPlaceholder">
+        <span class="lightbox-ico" id="lightboxIco"></span>
+        <span class="lightbox-label" id="lightboxLabel"></span>
+      </div>
+    </div>
+    <button class="lightbox-next" onclick="event.stopPropagation(); navegarLightbox(1)" aria-label="Próxima">›</button>
+  </div>
 
   <!-- SOBRE -->
   <section id="sobre">
