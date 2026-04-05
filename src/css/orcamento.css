@@ -123,13 +123,13 @@ body.page-orcamento::before {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--red-glow);
-  border: 1px solid rgba(236, 31, 38, 0.25);
+  background: rgba(37, 211, 102, 0.12);
+  border: 1px solid rgba(37, 211, 102, 0.3);
   border-radius: 100px;
   padding: 7px 16px;
   font-size: 0.72rem;
   font-weight: 600;
-  color: #ff6b6f;
+  color: var(--wpp-green);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 24px;
@@ -140,7 +140,7 @@ body.page-orcamento::before {
 .dot-pulse {
   width: 8px;
   height: 8px;
-  background: var(--red);
+  background: var(--wpp-green);
   border-radius: 50%;
   animation: pulse 1.8s ease infinite;
   flex-shrink: 0;
