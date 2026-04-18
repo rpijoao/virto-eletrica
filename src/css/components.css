@@ -63,6 +63,22 @@ nav {
   background: var(--red-dark);
 }
 
+/* ── LOGIN ICON (NAV) ── */
+.nav-login {
+  color: #888;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.35rem;
+  border-radius: 6px;
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.nav-login:hover {
+  color: var(--red);
+  background: rgba(236, 31, 38, 0.08);
+}
+
 /* ── HAMBURGER ── */
 .hamburger {
   display: none;
