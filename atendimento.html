@@ -135,6 +135,52 @@ footer{background:#111;padding:28px 24px;text-align:center;}
 .lb-nav{display:flex;gap:12px;justify-content:center;margin-top:16px;}
 .lb-btn{background:rgba(255,255,255,0.12);border:none;color:#fff;font-size:20px;width:48px;height:48px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;}
 .lb-counter{color:#9A9A9E;font-size:13px;text-align:center;margin-top:10px;}
+
+@media (min-width: 900px) {
+  /* Restrição Base para Telões */
+  section { padding: 90px calc(50% - 480px); }
+  .gallery-section { padding: 90px calc(50% - 480px) 120px; }
+  .cta-section { padding: 120px calc(50% - 480px); }
+  
+  /* Hero Refinamentos */
+  .hero-content { max-width: 1100px; margin: 0 auto; width: 100%; padding: 0 40px; text-align: left; }
+  .hero-title { font-size: 88px; }
+  .hero-title br { display: none; }
+  .hero-title span { margin-left: 12px; }
+  .hero-sub { font-size: 20px; max-width: 500px; margin-bottom: 48px; }
+  .cta-primary { width: max-content; padding: 20px 48px; display: inline-flex; margin-right: 16px; font-size: 19px; }
+  .cta-secondary { width: max-content; padding: 16px 40px; display: inline-flex; font-size: 17px; }
+  .hero-trust { padding-top: 36px; margin-top: 48px; gap: 40px; }
+  
+  /* Títulos Geriais */
+  .section-label { font-size: 13px; letter-spacing: 4px; }
+  .section-title { font-size: 48px; margin-bottom: 48px; }
+  
+  /* Grids Transformadas */
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .service-card { margin-bottom: 0; padding: 32px 24px; height: 100%; flex-direction: column; align-items: flex-start; }
+  .service-icon { margin-bottom: 8px; width: 56px; height: 56px; }
+  .service-name { font-size: 24px; margin-bottom: 12px; }
+  
+  .diff-grid { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .diff-card { padding: 32px 24px; }
+  
+  .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  .step { flex-direction: column; text-align: left; margin-bottom: 0; }
+  .step-num { width: 56px; height: 56px; font-size: 24px; margin-bottom: 16px; }
+  .step-title { font-size: 24px; margin-bottom: 8px; }
+  
+  .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .review-card { margin-bottom: 0; padding: 32px; }
+  
+  /* Carrossel Ajustes Desktop */
+  .carousel-slide { flex: 0 0 calc(33.333% - 8px); height: 500px; }
+  .gallery-cta-wrap { max-width: 400px; margin: 40px auto 0; }
+  
+  /* Footer CTA */
+  .cta-section h2 { font-size: 64px; }
+  .cta-wpp-big { width: max-content; padding: 24px 56px; margin: 0 auto; font-size: 26px; }
+}
 </style>
 </head>
 <body>
@@ -219,25 +265,27 @@ footer{background:#111;padding:28px 24px;text-align:center;}
 <section class="services">
   <p class="section-label">O que fazemos</p>
   <h2 class="section-title">Nossos Serviços</h2>
-  <div class="service-card">
-    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D32F2F" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-    <div>
-      <div class="service-name">Elétrica Emergencial 24h</div>
-      <div class="service-desc">Curto-circuito, queda de energia, cheiro de queimado, disjuntor caindo. Atendemos qualquer hora do dia ou da noite.</div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D32F2F" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+      <div>
+        <div class="service-name">Elétrica Emergencial 24h</div>
+        <div class="service-desc">Curto-circuito, queda de energia, cheiro de queimado, disjuntor caindo. Atendemos qualquer hora do dia ou da noite.</div>
+      </div>
     </div>
-  </div>
-  <div class="service-card">
-    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D32F2F" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-    <div>
-      <div class="service-name">Instalação Elétrica Residencial</div>
-      <div class="service-desc">Instalação completa ou parcial para sua casa, apartamento ou condomínio. Tudo feito com segurança e dentro das normas.</div>
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D32F2F" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+      <div>
+        <div class="service-name">Instalação Elétrica Residencial</div>
+        <div class="service-desc">Instalação completa ou parcial para sua casa, apartamento ou condomínio. Tudo feito com segurança e dentro das normas.</div>
+      </div>
     </div>
-  </div>
-  <div class="service-card">
-    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D32F2F" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
-    <div>
-      <div class="service-name">Tomadas, Interruptores e Iluminação</div>
-      <div class="service-desc">Troca, instalação e reparo de tomadas, interruptores, pontos de luz e luminárias em geral.</div>
+    <div class="service-card">
+      <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#D32F2F" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
+      <div>
+        <div class="service-name">Tomadas, Interruptores e Iluminação</div>
+        <div class="service-desc">Troca, instalação e reparo de tomadas, interruptores, pontos de luz e luminárias em geral.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -258,17 +306,19 @@ footer{background:#111;padding:28px 24px;text-align:center;}
 <section>
   <p class="section-label">Simples assim</p>
   <h2 class="section-title">Como Funciona</h2>
-  <div class="step">
-    <div class="step-num">1</div>
-    <div><div class="step-title">Você manda mensagem</div><div class="step-desc">Descreva o problema pelo WhatsApp. Resposta imediata, sem enrolação.</div></div>
-  </div>
-  <div class="step">
-    <div class="step-num">2</div>
-    <div><div class="step-title">Diagnóstico e orçamento</div><div class="step-desc">Passamos o orçamento antes de qualquer serviço. Sem surpresa no final.</div></div>
-  </div>
-  <div class="step">
-    <div class="step-num">3</div>
-    <div><div class="step-title">Técnico na sua casa</div><div class="step-desc">Chegamos rápido, resolvemos o problema com segurança e garantia.</div></div>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div><div class="step-title">Você manda mensagem</div><div class="step-desc">Descreva o problema pelo WhatsApp. Resposta imediata, sem enrolação.</div></div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div><div class="step-title">Diagnóstico e orçamento</div><div class="step-desc">Passamos o orçamento antes de qualquer serviço. Sem surpresa no final.</div></div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div><div class="step-title">Técnico na sua casa</div><div class="step-desc">Chegamos rápido, resolvemos o problema com segurança e garantia.</div></div>
+    </div>
   </div>
 </section>
 
@@ -276,20 +326,22 @@ footer{background:#111;padding:28px 24px;text-align:center;}
 <section class="testimonials">
   <p class="section-label">Quem já chamou</p>
   <h2 class="section-title">O Que Dizem de Nós</h2>
-  <div class="review-card">
-    <div class="stars">★★★★★</div>
-    <div class="review-text">"Tive um curto às 22h e em menos de 1 hora já estava resolvido. Profissional, rápido e preço justo."</div>
-    <div class="reviewer">Carlos M. — Fortaleza</div>
-  </div>
-  <div class="review-card">
-    <div class="stars">★★★★★</div>
-    <div class="review-text">"Refizeram toda a instalação elétrica do meu apartamento. Serviço limpo, sem bagunça e entregaram antes do prazo."</div>
-    <div class="reviewer">Ana R. — Meireles</div>
-  </div>
-  <div class="review-card">
-    <div class="stars">★★★★★</div>
-    <div class="review-text">"Chamei para trocar tomadas e interruptores. Super atencioso, explicou tudo que ia fazer. Recomendo demais!"</div>
-    <div class="reviewer">João F. — Aldeota</div>
+  <div class="testimonials-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-text">"Tive um curto às 22h e em menos de 1 hora já estava resolvido. Profissional, rápido e preço justo."</div>
+      <div class="reviewer">Carlos M. — Fortaleza</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-text">"Refizeram toda a instalação elétrica do meu apartamento. Serviço limpo, sem bagunça e entregaram antes do prazo."</div>
+      <div class="reviewer">Ana R. — Meireles</div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <div class="review-text">"Chamei para trocar tomadas e interruptores. Super atencioso, explicou tudo que ia fazer. Recomendo demais!"</div>
+      <div class="reviewer">João F. — Aldeota</div>
+    </div>
   </div>
 </section>
 
