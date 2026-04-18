@@ -3,8 +3,13 @@
    Nenhuma lógica complexa, apenas imports de CSS
    ══════════════════════════════════════════════════ */
 
+import { inject } from '@vercel/analytics';
+
 import '../css/variables.css';
 import '../css/base.css';
+
+// Vercel Analytics
+inject();
 import '../css/components.css';
 import '../css/orcamento.css';
 
