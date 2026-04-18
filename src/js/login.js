@@ -15,8 +15,8 @@ inject();
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
 // ── Supabase Client ──
-const SUPABASE_URL = 'https://nwjtxjlggnidayctnzjv.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im53anR4amxnZ25pZGF5Y3Ruemp2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU2MjEzOTgsImV4cCI6MjA5MTE5NzM5OH0.3AAtg7JujqhvcRjds9rjgxiFPQ6xJiDsQY9WuLWzBp4';
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
+const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
