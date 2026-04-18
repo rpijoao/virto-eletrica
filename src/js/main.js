@@ -7,11 +7,11 @@ import { inject } from '@vercel/analytics';
 
 import '../css/variables.css';
 import '../css/base.css';
+import '../css/components.css';
+import '../css/home.css';
 
 // Vercel Analytics
 inject();
-import '../css/components.css';
-import '../css/home.css';
 
 // ── Hamburger Menu ──
 function toggleMenu() {

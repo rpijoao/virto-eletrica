@@ -3,9 +3,14 @@
    Autenticação com Supabase Auth
    ══════════════════════════════════════════════════ */
 
+import { inject } from '@vercel/analytics';
+
 import '../css/variables.css';
 import '../css/base.css';
 import '../css/login.css';
+
+// Vercel Analytics
+inject();
 
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
