@@ -7,8 +7,10 @@
 - Strings JavaScript com acentos sempre em template literals (``) ou constantes — nunca concatenação solta
 - Nunca omitir charset em nenhum arquivo gerado
 
-## Stack do projeto
+## Natureza do Projeto e Stack
 
-- Frontend: HTML/CSS/JS single-page, hospedado no Vercel
-- Backend: Supabase (PostgreSQL + Auth + RLS)
-- Linguagem dos textos: Português brasileiro
+**Atenção:** Este projeto/site é **somente uma landing page** para atrair clientes do Google e de anúncios (marketing). É um site de apresentação da empresa Virto Elétrica e **NÃO tem nenhuma relação com a criação de orçamentos internos** da empresa ou ferramentas de gestão.
+
+- **Stack:** HTML/CSS/JS estático (sem banco de dados ou backend)
+- **Hospedagem:** Vercel
+- **Linguagem:** Português brasileiro
